@@ -8,19 +8,6 @@ ALTER TABLE `accident_regis`
   ADD KEY `FK_acccatID_idx` (`acccatID`);
 
 
-
-ALTER TABLE incident_regis ADD KEY `FK_driverID_idx` (`driverID`);
-ALTER TABLE incident_regis ADD KEY `FK_actbyID_idx` (`actbyID`);
-ALTER TABLE incident_regis ADD KEY `FK_plcactionID_idx` (`plcactionID`);
-ALTER TABLE incident_regis ADD KEY `wrtypeID` (`wrtypeID`);
-
-
-ALTER TABLE infrgs ADD KEY `FK_staffID_idx` (`staffID`);
-ALTER TABLE infrgs ADD KEY `FK_invID_idx` (`invID`);
-ALTER TABLE infrgs ADD KEY `FK_inftypeID_idx` (`inftypeID`);
-ALTER TABLE infrgs ADD KEY `wrtypeID` (`wrtypeID`);
-ALTER TABLE infrgs ADD KEY `FK_companyID_idx` (`companyID`);
-
 ALTER TABLE inspc ADD KEY `FK_empID_idx` (`empID`);
 ALTER TABLE inspc ADD KEY `FK_insrypeID_idx` (`insrypeID`);
 ALTER TABLE inspc ADD KEY `FK_fineID_idx` (`fineID`);
