@@ -33,13 +33,6 @@
 	{
 		exit('Try again...!!!! process not successfull.<br>click <a href="dashboard.php">Here</a> to continue');
 	}
-	
-	echo "<div style='width:100%; margin-top:200px; color:#555' align='center'>
-				<img src='images/loading_icon.gif' /><br>
-				<i>Please wait....we are backing up the entire database...<br>
-				it will take about a minute....
-				</i>
-				</div>";
 				
 	/**
 	 * The Backup_Database class
