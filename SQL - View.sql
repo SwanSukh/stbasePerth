@@ -100,43 +100,7 @@ From
     master On master.ID = sicklv.lvtypeID
 Order By
     `Date ID` ASC
-	
-<!-------------------------------------------------- INSPECTION VIEW -------------------------------------------------->
-CREATE PROCEDURE `Trigger_Data_Inspections`() NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
-Select
-    inspc.ID,
-    company.title As Depot,
-    inspc.rptno As `Report No`,
-    inspc.ecodeID As `Driver ID`,
-    master.title As `Inspected By`,
-    srvdtls.codeID As `Service No`,
-    inspc.timeID_3 As `Actual time`,
-    inspc.description As Description,
-    inspc.dateID_1 As `Date Inspected`,
-    inspc.description_2 As `PTA Response`,
-    inspc.description_3 As `Further Action`,
-    inspc.insrypeID As `Inspection Result`,
-    inspc.busID As `Bus No.`,
-    inspc.shiftID As `Shift No.`,
-    inspc.timeID_1 As `Scheduled Departure Time`,
-    inspc.timeID_2 As `Timing Point Time`,
-    inspc.fineID As Fine,
-    inspc.dateID As `Report Date`,
-    employee.full_name As `Driver Name`,
-    employee1.full_name As `Investigated By`,
-    inspc.serviceinfID As `Service Info`,
-    inspc.statusID As Closed,
-    If(inspc.disciplineID = 1, 'Yes', (If(inspc.disciplineID = 2, 'No', ''))) As Discipline,
-    If(inspc.trisID = 1, 'Yes', 'No') As `Tris Complete`
-From
-    inspc Inner Join
-    company On company.ID = inspc.companyID Left Join
-    master On master.ID = inspc.insrypeID Left Join
-    employee On employee.ID = inspc.empID Left Join
-    employee employee1 On employee1.ID = inspc.invstID Left Join
-    srvdtls On srvdtls.ID = inspc.servicenoID
-Order By
-    `Report No` ASC
+				       
 	
 <!-------------------------------------------------- ACCIDENTS VIEW -------------------------------------------------->
 CREATE PROCEDURE `Trigger_Data_Accidents`() NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
